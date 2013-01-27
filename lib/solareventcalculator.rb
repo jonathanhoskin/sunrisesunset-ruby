@@ -204,7 +204,7 @@ class SolarEventCalculator
     offset = (get_utc_offset(timezone) / 60 / 60).to_i
     offset = (offset > 0) ? "+" + offset.to_s : offset.to_s
 
-    timeInZone = DateTime.parse("#{@date.strftime}T#{local.strftime('%H:%M:%S')}#{offset}")
+    timeInZone = DateTime.parse("#{@date.strftime('%y-%m-%d')}T#{local.strftime('%H:%M:%S')}#{offset}")
     # puts "CALC:timeInZone #{timeInZone}"
     timeInZone
   end
