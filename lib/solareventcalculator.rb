@@ -124,6 +124,10 @@ class SolarEventCalculator
     mins = pad_minutes(mins.to_i)
     hours = timeParts[0]
 
+    puts @date
+    puts hours
+    puts pad_minutes(mins.to_i)
+
     Time.utc(@date.year, @date.mon, @date.mday, hours, pad_minutes(mins.to_i))
   end
 
